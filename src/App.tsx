@@ -7,18 +7,18 @@ import ShoppingListForm from './components/ShoppingListForm';
 
 function App() {
  const [items,setItems]= useState<Item[]>([]);
-  // const list=[
-  //   {id:1,product:"Milk",quantity:2},
-  //   {id:2,product:"Bread",quantity:3},
-  //   {id:3,product:"Eggs",quantity:4},
-  // ]
+
+ const addItem=(product:string)=>{
+  console.log("Made it to the app component");
+  console.log(product)
+ }
   return (
     <div className="App">
       {/* <Greeter person="Aashish"/>
       <Greeter person="Sumit"/>
       <Greeter person="Aryal"/> */}
       <ShoppingList items={items}/>
-      <ShoppingListForm/>
+      <ShoppingListForm onAddItem={addItem}/>
     </div>
   );
 }
