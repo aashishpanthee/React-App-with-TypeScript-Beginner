@@ -4,13 +4,13 @@ import './App.css';
 import ShoppingList from './components/ShoppingList';
 import Item from "./models/SingleItem"
 import ShoppingListForm from './components/ShoppingListForm';
+import {v4 as getId} from "uuid";
 
 function App() {
  const [items,setItems]= useState<Item[]>([]);
 
- const addItem=(product:string)=>{
-  console.log("Made it to the app component");
-  console.log(product)
+ const addItem=(product:string,quantity:number)=>{
+setItems([...items,{id:getId(),product,quantity}])
  }
   return (
     <div className="App">
