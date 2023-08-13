@@ -1,5 +1,5 @@
 export default interface Item{
-    readonly id:number,
+    readonly id:string,
      product:string;
      quantity:number
   }
